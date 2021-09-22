@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DCConfig version="1.0">
+	<DomainController type="Forest" domain="test.local" />
+	<DHCP>
+		<Scope name="LAN" server="192.168.150.69" start="192.168.150.101" end="192.168.150.105" mask="24" gateway="192.168.150.1" dns="192.168.150.69" />
+	</DHCP>
+	<DNS>
+		<Zone priority="primary" id="192.168.150.0/24" />
+		<A name="testhost1" zone="test.local" ip="192.168.150.151" />
+		<A name="testhost2" zone="test.local" ip="192.168.150.152" />
+		<A name="testhost3" zone="test.local" ip="192.168.150.153" />
+		<AAAA name="testhost1" zone="test.local" ip="69::1" />
+		<AAAA name="testhost2" zone="test.local" ip="69::2" />
+		<AAAA name="testhost3" zone="test.local" ip="69::3" />
+		<CName alias="cupcakesvr1" zone="test.local" fqdn="testhost1.test.local" />
+		<CName alias="cupcakesvr2" zone="test.local" fqdn="testhost2.test.local" />
+		<CName alias="cupcakesvr3" zone="test.local" fqdn="testhost3.test.local" />
+		<PTR name="151" zone="150.168.192.in-addr.arpa" fqdn="cupcakesvr1.test.local" ip="192.168.150.151" />
+		<PTR name="152" zone="150.168.192.in-addr.arpa" fqdn="cupcakesvr2.test.local" ip="192.168.150.152" />
+		<PTR name="153" zone="150.168.192.in-addr.arpa" fqdn="cupcakesvr3.test.local" ip="192.168.150.153" />
+		<NS zone="test.local" fqdn="nsfw1.test.local" />
+		<NS zone="test.local" fqdn="nsfw2.test.local" />
+		<NS zone="test.local" fqdn="nsfw3.test.local" />
+		<MX name="email1" zone="test.local" fqdn="mx1.test.local" preference="21" />
+		<MX name="email2" zone="test.local" fqdn="mx2.test.local" preference="22" />
+		<MX name="email3" zone="test.local" fqdn="mx3.test.local" preference="23" />
+	</DNS>
+	<OUs>
+		<OU name="TestOU1" />
+		<OU name="TestOU2" />
+		<OU name="TestOU3" />
+	</OUs>
+	<Groups>
+		<Group name="TestGroup1" />
+		<Group name="TestGroup2" />
+		<Group name="TestGroup3" />
+	</Groups>
+	<Users>
+		<User id="01234" name="Balls" fname="Harry" initial="T" lname="Balzack" ou="TestOU1" phone="555" role="something fun" email="Harry.Balzack@dinnerparty.co.nz" >"TestGroup1,TestGroup2"</User>
+		<User id="56789" name="Muff" fname="Harry" initial="T" lname="Beaver" ou="TestOU2" phone="6969" role="something boring" email="Harry.Balzack@dinnerparty.co.nz" >"TestGroup1,TestGroup3"</User>
+		<User id="13579" name="Cunt" fname="Mike" initial="T" lname="Hunt" ou="TestOU3" phone="999" role="clean shit" email="Harry.Balzack@dinnerparty.co.nz" >"TestGroup3,TestGroup2"</User>
+	</Users>
+	<GroupPolicy>
+		<GPO name="string" path="file path" />
+	</GroupPolicy>
+</DCConfig>
