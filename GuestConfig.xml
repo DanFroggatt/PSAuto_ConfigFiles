@@ -1,32 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <GuestConfig version="1.0">
-	<Guest name="TestSvr" domain="test.local" ou="" service="DomainController" />
-	<Directories>
-		<Directory path="C:\Users\Public\Documents\TestFolder" />
-		<Directory path="C:\Users\Public\Documents\TestFolder\Fuct" />
-	</Directories>
-	<Software>
-		<File source="\\192.168.150.1\usb\Work Stuff\Network tools\putty-64bit-0.71-installer.msi" destination="C:\Users\Public\Documents\TestFolder\Fuct\putty-64bit-0.71-installer.msi" />
-		<Folder source="\\192.168.150.1\usb\Work Stuff\Network tools\Microsoft Office 2013 Professional Plus" destination="C:\Users\Public\Documents\TestFolder\Microsoft Office 2013 Professional Plus" />
-		<ExtractIso iso ="Z:\VMShare\windows_10.iso">
-			<File source="sorce file path" destination="destination file path" />
-			<Folder source="sorce directory path" destination="destination directory path" />
-		</ExtractIso>
-		<Install path="C:\Users\Public\Documents\TestFolder\Fuct\putty-64bit-0.70-installer.msi" />
-	</Software>
-	<Adapters defaultGateway="192.168.150.1" >
+	<Guest name="DC_01" domain="lab.local" ou="" service="DomainController" />
+	<Directories/>
+	<Software/>
+	<Adapters defaultGateway="192.168.20.1" >
 		<Adapter name="Ethernet0" dhcp="false">
-			<IPAddress address ="192.168.150.69" prefix ="24" gateway ="192.168.150.1">"192.168.150.10,192.168.150.11"</IPAddress>
+			<IPAddress address ="192.168.20.69" prefix ="24" gateway ="192.168.20.1">"192.168.1.1"</IPAddress>
 		</Adapter>
-		<Adapter name="Ethernet1" dhcp="true" />
 	</Adapters>
-	<Firewalls>
-		<Firewall name="DTC" path="C:\GuestAutomation\Modules\Firewall-EnableDTC.txt" />
-	</Firewalls>
-	<NetworkDrives trecShare="false">
-		<NetworkDrive drive="X:" path="\\192.168.150.1\usb\Movies" user="admin">"01000000d08c9ddf0115d1118c7a00c04fc297eb01000000ea2c9f29edb42841bc2bbacefbd5486300000000020000000000106600000001000020000000852b9971553d97a61e4d070c1bb8058953458823a44d809e1073040d4dab7613000000000e8000000002000020000000a723a13095fd171c36c9a0acbb382641391d1b6b0904b7ba7e292c9a2f59618e20000000f1979d5e24745d1d34aeddf9c19ad3f5f0980b32a87494702c660b972b36b1fb400000004bd49e7ea61df1e0ce0cc3c0fb70a039d283fa82235a118af29ff1ebec91d2af241b75640c39c101bdf8e45d6512beef761bbf3a0d51f5203cc3673c39d0242d"</NetworkDrive>
-	</NetworkDrives>
-	<DTC enabled="true" />
+	<Firewalls/>
+	<NetworkDrives/>
+	<DTC enabled="false" />
 	<DisableTask name="servermanager" />
-	<EnableTask name="servermanager" path="" />
 </GuestConfig>
