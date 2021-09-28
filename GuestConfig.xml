@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <GuestConfig version="1.0">
-	<Guest name="DC_01" domain="lab.local" ou="" service="DomainController" />
+	<Guest name="DC-01" domain="lab.local" ou="" service="DomainController" />
 	<Directories/>
 	<Software/>
 	<Adapters defaultGateway="192.168.20.1" >
