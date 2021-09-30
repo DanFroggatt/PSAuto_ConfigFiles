@@ -4,7 +4,9 @@
 	<DHCP>
 		<Scope name="LAN" server="192.168.20.1" start="192.168.20.101" end="192.168.20.105" mask="24" gateway="192.168.20.1" dns="192.168.1.1" />
 	</DHCP>
-	<DNS/>
+	<DNS>
+		<Zone priority="primary" id="192.168.150.0/24" />
+	</DNS>
 	<OUs/>
 	<Groups/>
 	<Users/>
