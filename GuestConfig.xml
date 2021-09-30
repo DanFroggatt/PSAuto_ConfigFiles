@@ -3,9 +3,9 @@
 	<Guest name="DC-01" domain="lab.local" ou="" service="DomainController" />
 	<Directories/>
 	<Software/>
-	<Adapters defaultGateway="192.168.20.1" >
+	<Adapters defaultGateway="192.168.20.254" >
 		<Adapter name="Ethernet0" dhcp="false">
-			<IPAddress address ="192.168.20.69" prefix ="24" gateway ="192.168.20.1">"192.168.1.1"</IPAddress>
+			<IPAddress address ="192.168.20.1" prefix ="24" gateway ="192.168.20.254">"192.168.1.1"</IPAddress>
 		</Adapter>
 	</Adapters>
 	<Firewalls/>
